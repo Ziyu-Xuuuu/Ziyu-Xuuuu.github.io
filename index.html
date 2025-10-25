@@ -3,31 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ziyu Xu | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Ziyu Xu | Robotics & Quantitative Research</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #161b22;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    h1 { font-size: 2.4em; margin-bottom: 10px; }
+    h2 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 5px; }
+    p, li { font-size: 1em; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    section { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+    .projects a { display: inline-block; margin: 8px 12px; background: #21262d; padding: 10px 14px; border-radius: 6px; }
+    footer { background-color: #161b22; text-align: center; padding: 30px; color: #8b949e; font-size: 0.9em; }
+  </style>
 </head>
+
 <body>
   <header>
     <h1>Ziyu Xu</h1>
-    <p>Senior student at UM Ann Arbor | Robotics & Quant Trading Enthusiast</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="https://github.com/Ziyu-Xuuuu">GitHub</a>
-    </nav>
+    <p>Senior student in UM Ann Arbor (Mechanical Engineering & ECE, SJTU Joint Institute)</p>
+    <p>Focused on <strong>Quantitative Trading</strong> and <strong>Robotics Perception & Control</strong></p>
+    <p>
+      <a href="https://github.com/Ziyu-Xuuuu">GitHub: Ziyu-Xuuuu</a> |
+      <a href="mailto:ziyuxu@umich.edu">ziyuxu@umich.edu</a>
+    </p>
   </header>
 
-  <section>
-    <h2>Welcome!</h2>
+  <section id="about">
+    <h2>About</h2>
     <p>
-      Hi, I’m Ziyu 👋 — a senior student in Mechanical Engineering and ECE (UM + SJTU).
-      My work focuses on robot perception, mechanical design, and quantitative trading.
+      I am a senior undergraduate student jointly enrolled in the University of Michigan and Shanghai Jiao Tong University.
+      My research and engineering interests bridge robotics and finance — developing intelligent control systems for autonomous vehicles,
+      and applying data-driven algorithms in quantitative trading.
     </p>
   </section>
 
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>University of Michigan</strong>, BS in Mechanical Engineering, Minor in Computer Science (2022–2026) — GPA: 3.81/4.0</li>
+      <li><strong>Shanghai Jiao Tong University</strong>, BS in Electrical and Computer Engineering (2022–2026) — GPA: 3.63/4.0</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Internship & Research</h2>
+    <ul>
+      <li><strong>Quantitative Analyst Intern</strong>, Treasure-Solution (Dec 2024 – Mar 2025)
+        <ul>
+          <li>Developed hybrid statistical–machine learning models for stock forecasting.</li>
+          <li>Integrated predictive models into a Python/C++ trading framework; achieved 10.3% annualized return in backtests.</li>
+        </ul>
+      </li>
+      <li><strong>Robotic Perception & Control Research</strong>, Curly Lab @ UMich (May 2025 – Present)
+        <ul>
+          <li>Designed nonlinear MPC algorithms for autonomous surface vehicle (ASV) control.</li>
+          <li>Enhanced SAM + DINO-based perception pipeline for multimodal mapping.</li>
+        </ul>
+      </li>
+      <li><strong>Multi-UAV Exploration Optimization</strong>, UMich (Sep 2024 – Present)
+        <ul>
+          <li>Developed cooperative exploration algorithms with SLAM and graph-based optimization.</li>
+          <li>Used reinforcement learning and LLM reasoning to improve coverage efficiency.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Highlighted Projects</h2>
+    <div class="projects">
+      <a href="https://github.com/Ziyu-Xuuuu/Stock_Quant">📈 Stock_Quant</a>
+      <a href="https://github.com/Ziyu-Xuuuu/TradingAgents-CN">🤖 TradingAgents-CN</a>
+      <a href="https://github.com/Ziyu-Xuuuu/Resource-Aware-Coordination-AirSim">🛰 Resource-Aware-Coordination-AirSim</a>
+      <a href="https://github.com/Ziyu-Xuuuu/Airsim_Unity_Lab">🧠 AirSim_Unity_Lab</a>
+      <a href="https://github.com/Ziyu-Xuuuu/Slide_Airsim">🚤 Slide_Airsim</a>
+      <a href="https://github.com/Ziyu-Xuuuu/445">📚 EECS 445 ML Course Projects</a>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Gold Medal, University Physics Competition 2023 (Top 2%)</li>
+      <li>M Prize, Mathematical Contest in Modeling 2024 (Top 13%)</li>
+      <li>3rd Place, Robot Competition, Shanghai Jiao Tong University</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p><strong>Technical:</strong> Python, C++, MATLAB, Java, SQL, ROS2, PyTorch, Gazebo, AirSim</p>
+    <p><strong>Domains:</strong> Quantitative Finance, Machine Learning, Control Systems, Computer Vision</p>
+  </section>
+
   <footer>
-    <p>© 2025 Ziyu Xu — Built with ❤️ using GitHub Pages</p>
+    <p>© 2025 Ziyu Xu — <a href="https://github.com/Ziyu-Xuuuu">GitHub</a> | <a href="mailto:ziyuxu@umich.edu">Contact Me</a></p>
   </footer>
 </body>
 </html>
