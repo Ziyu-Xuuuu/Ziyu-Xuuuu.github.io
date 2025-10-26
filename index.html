@@ -18,6 +18,27 @@
       text-align: center;
       padding: 60px 20px;
     }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px; /* 图片与文字间距 */
+      flex-wrap: wrap;
+    }
+    
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 0px; /* 方形 + 圆角边缘 */
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    
+    .header-text {
+      max-width: 600px;
+      text-align: left;
+    }
+    
     h1 { font-size: 2.4em; margin-bottom: 10px; }
     h2 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 5px; }
     p, li { font-size: 1em; }
@@ -31,15 +52,18 @@
 
 <body>
   <header>
-      <img src="profile.jpg" alt="Ziyu Xu" width="180" 
-           style="border-radius:50%; display:block; margin:0 auto 20px auto;">
-      <h1>Ziyu Xu</h1>
-      <p>Senior student in UM Ann Arbor (Mechanical Engineering & ECE, SJTU Joint Institute)</p>
-      <p>Focused on <strong>Quantitative Trading</strong> and <strong>Robotics Perception & Control</strong></p>
-      <p>
-        <a href="https://github.com/Ziyu-Xuuuu">GitHub: Ziyu-Xuuuu</a> |
-        <a href="mailto:ziyuxu@umich.edu">ziyuxu@umich.edu</a>
-      </p>
+    <div class="header-container">
+      <img src="profile.jpg" alt="Ziyu Xu" class="profile-photo">
+      <div class="header-text">
+        <h1>Ziyu Xu</h1>
+        <p>Senior student in UM Ann Arbor (Mechanical Engineering & ECE, SJTU Joint Institute)</p>
+        <p>Focused on <strong>Quantitative Trading</strong> and <strong>Robotics Perception & Control</strong></p>
+        <p>
+          <a href="https://github.com/Ziyu-Xuuuu">GitHub: Ziyu-Xuuuu</a> |
+          <a href="mailto:ziyuxu@umich.edu">ziyuxu@umich.edu</a>
+        </p>
+      </div>
+    </div>
   </header>
 
   <section id="about">
@@ -115,4 +139,5 @@
   </footer>
 </body>
 </html>
+
 
