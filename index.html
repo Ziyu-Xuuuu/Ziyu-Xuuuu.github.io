@@ -3,142 +3,675 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ziyu Xu | Robotics & Quantitative Research</title>
+  <title>Ziyu Xu | Robotics Researcher & Engineer</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background-color: #0d1117;
-      color: #e6edf3;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
       line-height: 1.6;
     }
-    header {
+
+    /* Navigation Bar */
+    nav {
       background-color: #161b22;
-      text-align: center;
-      padding: 60px 20px;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #30363d;
     }
-    .header-container {
+
+    nav .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #58a6ff;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #e6edf3;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 40px; /* 图片与文字间距 */
+      gap: 60px;
       flex-wrap: wrap;
     }
-    
+
     .profile-photo {
-      width: 180px;
-      height: 220px;
-      border-radius: 0px; /* 方形 + 圆角边缘 */
+      width: 200px;
+      height: 240px;
+      border-radius: 8px;
       object-fit: cover;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
     }
-    
-    .header-text {
+
+    .hero-text {
       max-width: 600px;
       text-align: left;
     }
-    
-    h1 { font-size: 2.4em; margin-bottom: 10px; }
-    h2 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 5px; }
-    p, li { font-size: 1em; }
-    a { color: #58a6ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    section { max-width: 900px; margin: 50px auto; padding: 0 20px; }
-    .projects a { display: inline-block; margin: 8px 12px; background: #21262d; padding: 10px 14px; border-radius: 6px; }
-    footer { background-color: #161b22; text-align: center; padding: 30px; color: #8b949e; font-size: 0.9em; }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #58a6ff 0%, #79c0ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero .subtitle {
+      font-size: 1.3rem;
+      color: #8b949e;
+      margin-bottom: 1rem;
+    }
+
+    .hero .description {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #238636;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #2ea043;
+    }
+
+    .btn-secondary {
+      background-color: #21262d;
+      color: #e6edf3;
+      border: 1px solid #30363d;
+    }
+
+    .btn-secondary:hover {
+      background-color: #30363d;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Section */
+    section {
+      padding: 80px 20px;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      color: #58a6ff;
+      margin-bottom: 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #58a6ff;
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    /* Research Projects Grid */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .research-card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .research-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(88, 166, 255, 0.2);
+    }
+
+    .research-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background-color: #0d1117;
+    }
+
+    .research-content {
+      padding: 1.5rem;
+    }
+
+    .research-card h3 {
+      font-size: 1.5rem;
+      color: #58a6ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .research-card .affiliation {
+      color: #8b949e;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .research-card .metrics {
+      background-color: #0d1117;
+      padding: 0.8rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    .research-card .metrics strong {
+      color: #7ee787;
+    }
+
+    .research-card ul {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    .research-card li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    .research-card li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: #58a6ff;
+      font-weight: bold;
+    }
+
+    .research-links {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .research-links a {
+      padding: 8px 16px;
+      background-color: #21262d;
+      color: #58a6ff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      border: 1px solid #30363d;
+      transition: all 0.3s;
+    }
+
+    .research-links a:hover {
+      background-color: #30363d;
+      border-color: #58a6ff;
+    }
+
+    /* Experience Timeline */
+    .timeline {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #30363d;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 60px;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #58a6ff;
+      border: 3px solid #0d1117;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.3rem;
+      color: #58a6ff;
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-item .period {
+      color: #8b949e;
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Skills Section */
+    .skills-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .skill-category {
+      margin-bottom: 2rem;
+    }
+
+    .skill-category h3 {
+      color: #58a6ff;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .skill-tag {
+      background-color: #21262d;
+      color: #e6edf3;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid #30363d;
+      font-size: 0.95rem;
+    }
+
+    /* Publications */
+    .publication {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .publication h3 {
+      color: #58a6ff;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .publication .authors {
+      color: #8b949e;
+      margin-bottom: 0.5rem;
+    }
+
+    .publication .venue {
+      color: #7ee787;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #161b22;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #30363d;
+    }
+
+    footer .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    footer .social-links a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    footer .social-links a:hover {
+      color: #79c0ff;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="header-container">
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo">Ziyu Xu</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
       <img src="profile.jpg" alt="Ziyu Xu" class="profile-photo">
-      <div class="header-text">
+      <div class="hero-text">
         <h1>Ziyu Xu</h1>
-        <p>Senior student in UM Ann Arbor (Mechanical Engineering & ECE, SJTU Joint Institute)</p>
-        <p>Focused on <strong>Quantitative Trading</strong> and <strong>Robotics Perception & Control</strong></p>
+        <p class="subtitle">Robotics Researcher & Engineer</p>
+        <p class="description">
+          Senior student at University of Michigan (Mechanical Engineering) and Shanghai Jiao Tong University (ECE).
+          Focused on <strong>Robotic Perception & Control</strong>, <strong>Autonomous Systems</strong>, and <strong>Computer Vision</strong>.
+        </p>
+        <div class="cta-buttons">
+          <a href="CV_Ziyu Xu.pdf" class="btn btn-primary" download>📄 Download CV</a>
+          <a href="https://github.com/Ziyu-Xuuuu" class="btn btn-secondary" target="_blank">💻 GitHub</a>
+          <a href="mailto:ziyuxu@umich.edu" class="btn btn-secondary">📧 Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
         <p>
-          <a href="https://github.com/Ziyu-Xuuuu">GitHub: Ziyu-Xuuuu</a> |
-          <a href="mailto:ziyuxu@umich.edu">ziyuxu@umich.edu</a>
+          I am a senior undergraduate student jointly enrolled at the <strong>University of Michigan</strong> (GPA: 3.81/4.0)
+          and <strong>Shanghai Jiao Tong University</strong> (GPA: 3.63/4.0). My research focuses on developing intelligent
+          perception and control systems for autonomous robots, with applications in autonomous surface vehicles (ASVs),
+          multi-drone coordination, and surgical robotics.
+        </p>
+        <p style="margin-top: 1rem;">
+          I am particularly interested in bridging classical control theory (MPC, nonlinear control) with modern deep learning
+          approaches (vision transformers, multimodal perception) to build robust, real-time autonomous systems.
         </p>
       </div>
     </div>
-  </header>
-
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      I am a senior undergraduate student jointly enrolled in the University of Michigan and Shanghai Jiao Tong University.
-      My research and engineering interests bridge robotics and finance — developing intelligent control systems for autonomous vehicles,
-      and applying data-driven algorithms in quantitative trading.
-    </p>
   </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>University of Michigan</strong>, BS in Mechanical Engineering, Minor in Computer Science (2022–2026) — GPA: 3.81/4.0</li>
-      <li><strong>Shanghai Jiao Tong University</strong>, BS in Electrical and Computer Engineering (2022–2026) — GPA: 3.63/4.0</li>
-    </ul>
-  </section>
+  <!-- Research Section -->
+  <section id="research" style="background-color: #0d1117;">
+    <div class="container">
+      <h2>Research Projects</h2>
+      <div class="research-grid">
 
-  <section id="experience">
-    <h2>Internship & Research</h2>
-    <ul>
-      <li><strong>Quantitative Analyst Intern</strong>, Treasure-Solution (Dec 2024 – Mar 2025)
-        <ul>
-          <li>Developed hybrid statistical–machine learning models for stock forecasting.</li>
-          <li>Integrated predictive models into a Python/C++ trading framework; achieved 10.3% annualized return in backtests.</li>
-        </ul>
-      </li>
-      <li><strong>Robotic Perception & Control Research</strong>, Curly Lab @ UMich (May 2025 – Present)
-        <ul>
-          <li>Designed nonlinear MPC algorithms for autonomous surface vehicle (ASV) control.</li>
-          <li>Enhanced SAM + DINO-based perception pipeline for multimodal mapping.</li>
-        </ul>
-      </li>
-      <li><strong>Multi-UAV Exploration Optimization</strong>, UMich (Sep 2024 – Present)
-        <ul>
-          <li>Developed cooperative exploration algorithms with SLAM and graph-based optimization.</li>
-          <li>Used reinforcement learning and LLM reasoning to improve coverage efficiency.</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+        <!-- Curly Lab Research -->
+        <div class="research-card">
+          <img src="Curly_1.83129d3f628db5a9c2a6.jpg" alt="Autonomous Surface Vehicle" class="research-image">
+          <div class="research-content">
+            <h3>Robotic Perception & Control for ASVs</h3>
+            <p class="affiliation">Curly Lab, University of Michigan | Jun 2024 - Present<br>Advisor: Prof. Maani Ghaffari</p>
+            <ul>
+              <li><strong>Perception:</strong> Built DINOv2 + SAM2 segmentation pipeline; fine-tuned Grounded-DINO for multi-frame tracking</li>
+              <li><strong>Control:</strong> Implemented MPC and Lie-MPC frameworks with real-time disturbance estimation</li>
+              <li><strong>System Integration:</strong> Calibrated LiDAR-IMU-camera extrinsics; streamlined deployment from ~15 to ~6 steps</li>
+            </ul>
+            <div class="metrics">
+              <strong>Key Results:</strong> mAP@0.5 = 41.3% | ID F1-score improved from ~30% to ~50% |
+              ~20% RMSE improvement in path tracking | <10% steady-state error | <3.4% calibration error
+            </div>
+            <div class="research-links">
+              <a href="https://github.com/Ziyu-Xuuuu/Slide_Airsim" target="_blank">🔗 GitHub: Slide_Airsim</a>
+            </div>
+            <p style="margin-top: 1rem; color: #7ee787; font-weight: 600;">
+              📝 Co-author of RAL paper (under review)
+            </p>
+          </div>
+        </div>
 
-  <section id="projects">
-    <h2>Highlighted Projects</h2>
-    <div class="projects">
-      <a href="https://github.com/Ziyu-Xuuuu/Stock_Quant">📈 Stock_Quant</a>
-      <a href="https://github.com/Ziyu-Xuuuu/TradingAgents-CN">🤖 TradingAgents-CN</a>
-      <a href="https://github.com/Ziyu-Xuuuu/Resource-Aware-Coordination-AirSim">🛰 Resource-Aware-Coordination-AirSim</a>
-      <a href="https://github.com/Ziyu-Xuuuu/Airsim_Unity_Lab">🧠 AirSim_Unity_Lab</a>
-      <a href="https://github.com/Ziyu-Xuuuu/Slide_Airsim">🚤 Slide_Airsim</a>
-      <a href="https://github.com/Ziyu-Xuuuu/445">📚 EECS 445 ML Course Projects</a>
+        <!-- Multi-Drone Research -->
+        <div class="research-card">
+          <img src="Curly_2.c1213f6dcdc65997c08a.png" alt="Multi-Drone System" class="research-image">
+          <div class="research-content">
+            <h3>Resource-Aware Multi-Drone Coordination</h3>
+            <p class="affiliation">University of Michigan | Oct 2024 - Present<br>Advisor: Prof. Vasileios Tzoumas</p>
+            <ul>
+              <li><strong>Simulation Infrastructure:</strong> Rebuilt Unity + AirSim + ROS multi-drone simulator; fixed API timing and sensor issues</li>
+              <li><strong>Active SLAM:</strong> Implemented SlideSLAM in ROS1; initiated ROS2 port; integrated with AirSim for photorealistic mapping</li>
+              <li><strong>Theory:</strong> Studied submodular maximization and EXP3-based greedy schemes for distributed decision-making</li>
+            </ul>
+            <div class="research-links">
+              <a href="https://github.com/Ziyu-Xuuuu/Resource-Aware-Coordination-AirSim" target="_blank">🔗 Resource-Aware-Coordination</a>
+              <a href="https://github.com/Ziyu-Xuuuu/Airsim_Unity_Lab" target="_blank">🔗 AirSim_Unity_Lab</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Surgical Vision Research -->
+        <div class="research-card">
+          <img src="https://via.placeholder.com/400x220/161b22/58a6ff?text=Surgical+Computer+Vision" alt="Surgical Vision" class="research-image">
+          <div class="research-content">
+            <h3>Surgical Computer Vision Detection</h3>
+            <p class="affiliation">Shanghai Jiao Tong University | Apr 2024 - Dec 2024<br>Advisor: Prof. Yutong Ban</p>
+            <ul>
+              <li>Applied CNN-based architectures (ResNet, UNet) for surgical tool and bleeding point segmentation</li>
+              <li>Proposed hybrid spatio-temporal attention mechanism improving mIoU by <strong>4.8%</strong></li>
+              <li>Worked with CholecTriplet dataset for endoscopic surgery analysis</li>
+            </ul>
+            <div class="metrics">
+              <strong>Impact:</strong> 4.8% mIoU improvement over existing methods
+            </div>
+            <p style="margin-top: 1rem; color: #7ee787; font-weight: 600;">
+              📝 Co-author of paper accepted in <em>NPJ Digital Surgery</em>
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li>Gold Medal, University Physics Competition 2023 (Top 2%)</li>
-      <li>M Prize, Mathematical Contest in Modeling 2024 (Top 13%)</li>
-      <li>3rd Place, Robot Competition, Shanghai Jiao Tong University</li>
-    </ul>
+  <!-- Publications Section -->
+  <section id="publications">
+    <div class="container">
+      <h2>Publications</h2>
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="publication">
+          <h3>Robust Path Tracking for Autonomous Surface Vehicles with Lie-MPC and Online Disturbance Estimation</h3>
+          <p class="authors">First Author, <strong>Ziyu Xu</strong>, et al.</p>
+          <p class="venue">IEEE Robotics and Automation Letters (RAL) - Under Review</p>
+          <p style="margin-top: 0.5rem;">Proposed MPC framework achieving ~20% RMSE improvement and <10% steady-state error in real-world ASV path tracking.</p>
+        </div>
+
+        <div class="publication">
+          <h3>Hybrid Spatio-Temporal Attention for Surgical Tool Segmentation</h3>
+          <p class="authors">Co-Author Team, including <strong>Ziyu Xu</strong></p>
+          <p class="venue">NPJ Digital Surgery - Accepted</p>
+          <p style="margin-top: 0.5rem;">Novel attention mechanism improving surgical tool segmentation by 4.8% mIoU on CholecTriplet dataset.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Experience Section -->
+  <section id="experience" style="background-color: #0d1117;">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <h3>Quantitative Analyst Intern</h3>
+          <p class="period">APEXUS Tech LLC | Dec 2024 - Mar 2025</p>
+          <ul>
+            <li>Developed hybrid quantitative model combining statistical learning and automated factor-mining algorithms</li>
+            <li>Integrated predictive model into custom trading framework using Python and C++</li>
+            <li>Achieved <strong>10.3% annualized return</strong> with <strong>Sharpe ratio of 1.4</strong> during back-testing</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Data Science Engineer Intern</h3>
+          <p class="period">Library of Shanghai Jiao Tong University | Sep 2023 - May 2024</p>
+          <ul>
+            <li>Led team of 4 to build academic data platform analyzing Web of Science publications</li>
+            <li>Developed Python/Java-based dataset platform for SJTU researchers</li>
+            <li>Serving <strong>4000+ researchers</strong>; integrated with SJTU official website</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
   <section id="skills">
-    <h2>Skills</h2>
-    <p><strong>Technical:</strong> Python, C++, MATLAB, Java, SQL, ROS2, PyTorch, Gazebo, AirSim</p>
-    <p><strong>Domains:</strong> Quantitative Finance, Machine Learning, Control Systems, Computer Vision</p>
+    <div class="container">
+      <h2>Technical Skills</h2>
+      <div class="skills-container">
+
+        <div class="skill-category">
+          <h3>🤖 Robotics & Control</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">ROS1 / ROS2</span>
+            <span class="skill-tag">Model Predictive Control (MPC)</span>
+            <span class="skill-tag">Lie-MPC</span>
+            <span class="skill-tag">PID Control</span>
+            <span class="skill-tag">SLAM</span>
+            <span class="skill-tag">Sensor Fusion</span>
+            <span class="skill-tag">Gazebo</span>
+            <span class="skill-tag">AirSim</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>👁️ Computer Vision & ML</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Vision Transformers (DINOv2)</span>
+            <span class="skill-tag">SAM / SAM2</span>
+            <span class="skill-tag">Object Detection (YOLO, Grounded-DINO)</span>
+            <span class="skill-tag">Semantic Segmentation</span>
+            <span class="skill-tag">Multi-Object Tracking</span>
+            <span class="skill-tag">CNN Architectures</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>💻 Programming Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Verilog</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>🏆 Achievements</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Gold Medal - University Physics Competition 2023 (Top 2%)</span>
+            <span class="skill-tag">M Prize - Mathematical Contest in Modeling 2024 (Top 13%)</span>
+            <span class="skill-tag">3rd Place - Robot Competition, SJTU (Top 8%)</span>
+            <span class="skill-tag">NLP Research Program - Stanford University</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Ziyu Xu — <a href="https://github.com/Ziyu-Xuuuu">GitHub</a> | <a href="mailto:ziyuxu@umich.edu">Contact Me</a></p>
+    <div class="social-links">
+      <a href="https://github.com/Ziyu-Xuuuu" target="_blank">GitHub</a>
+      <a href="mailto:ziyuxu@umich.edu">Email</a>
+      <a href="CV_Ziyu Xu.pdf" download>CV (PDF)</a>
+    </div>
+    <p style="color: #8b949e;">© 2025 Ziyu Xu | Robotics Researcher & Engineer</p>
   </footer>
+
 </body>
 </html>
-
-
-
