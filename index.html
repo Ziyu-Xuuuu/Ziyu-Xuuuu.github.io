@@ -410,6 +410,13 @@
       position: relative;
       width: 100%;
       padding: 40px 0;
+      overflow-x: visible;
+    }
+
+    /* Timeline wrapper for scroll on mobile */
+    #timeline-nav .container {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     .timeline-track {
@@ -428,7 +435,14 @@
       align-items: center;
       position: relative;
       min-width: 100%;
+      width: max-content;
       gap: 20px;
+    }
+
+    @media (max-width: 1200px) {
+      .timeline-items-container {
+        min-width: 1200px;
+      }
     }
 
     .h-timeline-item {
@@ -543,24 +557,63 @@
 
       .horizontal-timeline {
         overflow-x: auto;
-        padding: 20px 0;
+        padding: 20px 10px;
+        -webkit-overflow-scrolling: touch;
       }
 
       .timeline-items-container {
-        min-width: 800px;
+        min-width: 1000px;
+        padding: 0 20px;
       }
 
       .h-timeline-label {
-        min-width: 100px;
-        max-width: 120px;
+        min-width: 90px;
+        max-width: 110px;
       }
 
       .h-timeline-title {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
       }
 
       .h-timeline-date {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
+      }
+
+      .h-timeline-type {
+        font-size: 0.6rem;
+        padding: 1px 6px;
+      }
+
+      #timeline-nav h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Add scroll hint */
+      #timeline-nav::after {
+        content: '← Scroll to see all projects →';
+        display: block;
+        text-align: center;
+        color: #8b949e;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        font-style: italic;
+      }
+    }
+
+    /* Tablet view */
+    @media (max-width: 1024px) and (min-width: 769px) {
+      .h-timeline-label {
+        min-width: 120px;
+        max-width: 140px;
+      }
+
+      .h-timeline-title {
+        font-size: 0.8rem;
+      }
+
+      .h-timeline-date {
+        font-size: 0.7rem;
       }
     }
   </style>
