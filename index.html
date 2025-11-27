@@ -891,6 +891,27 @@
               <a href="https://github.com/Ziyu-Xuuuu/Resource-Aware-Coordination-AirSim" target="_blank">🔗 Resource-Aware-Coordination</a>
               <a href="https://github.com/Ziyu-Xuuuu/Airsim_Unity_Lab" target="_blank">🔗 AirSim_Unity_Lab</a>
             </div>
+
+            <button class="see-details-btn" onclick="toggleDetails('multi-drone-details')">
+              <span>See Details</span>
+              <span class="arrow">▼</span>
+            </button>
+
+            <div id="multi-drone-details" class="details-section">
+              <div class="details-content">
+                <h4>🏛️ Institution & Collaboration</h4>
+                <p>Working with Prof. Vasileios Tzoumas at the IRAL Lab (Intelligent Robotics and Autonomy Lab), University of Michigan. Collaborating on distributed decision-making and multi-agent coordination research.</p>
+
+                <h4>🎯 Problem Statement</h4>
+                <p>Multi-drone systems face critical challenges in resource-constrained environments: efficient task allocation among multiple agents, communication bandwidth limitations, computational resource management, and active SLAM in dynamic environments. Traditional centralized approaches don't scale well, and existing simulation tools lack integration between photorealistic rendering and multi-agent coordination.</p>
+
+                <h4>💡 Detailed Impact</h4>
+                <p><strong>Simulation Infrastructure:</strong> Rebuilt Unity + AirSim + ROS multi-drone simulator, fixing critical API timing issues and sensor synchronization problems. This provides a robust platform for testing multi-agent algorithms in photorealistic environments.</p>
+                <p><strong>Active SLAM Integration:</strong> Successfully implemented SlideSLAM in ROS1 and initiated ROS2 port, enabling real-time collaborative mapping with photorealistic sensor data from AirSim.</p>
+                <p><strong>Theoretical Foundation:</strong> Studied submodular maximization and EXP3-based greedy schemes for distributed decision-making, laying groundwork for provably efficient multi-agent coordination under resource constraints.</p>
+                <p><strong>Future Impact:</strong> This research will enable scalable drone swarms for applications including search and rescue, environmental monitoring, and infrastructure inspection where communication and computational resources are limited.</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -911,6 +932,27 @@
             <p style="margin-top: 1rem; color: #1a7f37; font-weight: 600;">
               📝 Co-author of paper accepted in <em>NPJ Digital Surgery</em> (Oct 2025)
             </p>
+
+            <button class="see-details-btn" onclick="toggleDetails('surgical-vision-details')">
+              <span>See Details</span>
+              <span class="arrow">▼</span>
+            </button>
+
+            <div id="surgical-vision-details" class="details-section">
+              <div class="details-content">
+                <h4>🏛️ Institution & Collaboration</h4>
+                <p>Working with Prof. Yutong Ban at Shanghai Jiao Tong University's Medical Robotics Lab. Part of a collaborative research team focusing on AI applications in surgical medicine and medical image analysis.</p>
+
+                <h4>🎯 Problem Statement</h4>
+                <p>Foundation models like SAM (Segment Anything Model) show great promise for medical applications, but their effectiveness in surgical video analysis remains unclear. Surgeons need reliable, systematic guidelines for implementing these models in clinical settings. Key challenges include: accurate segmentation of surgical tools and anatomy in endoscopic videos, handling occlusions and blood/smoke artifacts, and establishing best practices for clinical deployment.</p>
+
+                <h4>💡 Detailed Impact</h4>
+                <p><strong>Systematic Evaluation:</strong> Conducted comprehensive testing of SAM across multiple surgical video datasets, providing the first systematic evaluation of foundation models for endoscopic surgery analysis.</p>
+                <p><strong>Clinical Guidelines:</strong> Developed evidence-based implementation guidelines that enable surgeons and medical AI researchers to effectively deploy SAM in clinical settings, reducing trial-and-error and accelerating clinical adoption.</p>
+                <p><strong>Best Practices:</strong> Established standardized protocols for prompt engineering, fine-tuning strategies, and quality assessment metrics specifically for surgical video segmentation tasks.</p>
+                <p><strong>Publication Impact:</strong> Contributing to NPJ Digital Surgery (Nature portfolio), a high-impact journal that bridges AI research and clinical practice. This work will guide future developments in computer-assisted surgery and surgical robotics.</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -962,9 +1004,31 @@
             <div class="metrics">
               <strong>Outcome:</strong> Improved tracking stability; reduced steady-state error; validated dynamic model accuracy
             </div>
+
+            <button class="see-details-btn" onclick="toggleDetails('lacuum-details')">
+              <span>See Details</span>
+              <span class="arrow">▼</span>
+            </button>
+
+            <div id="lacuum-details" class="details-section">
+              <div class="details-content">
+                <h4>🏛️ Institution & Collaboration</h4>
+                <p>Robotics internship at Lacuum.ai, a cutting-edge robotics startup developing autonomous navigation systems. Working directly with the robotics engineering team on real-world product development and deployment.</p>
+
+                <h4>🎯 Problem Statement</h4>
+                <p>Developing reliable autonomous robotic systems requires precise sensor calibration, accurate dynamic modeling, and robust real-time control. Commercial robotic platforms face challenges in: multi-sensor calibration (IMU, encoders, cameras), system identification for accurate physics-based models, integrated hardware-software design, and real-time embedded control implementation. Any errors in calibration or modeling cascade through the control system, leading to poor performance.</p>
+
+                <h4>💡 Detailed Impact</h4>
+                <p><strong>Sensor Calibration:</strong> Performed comprehensive calibration across IMU, wheel encoders, and onboard sensors, establishing accurate sensor fusion for reliable state estimation in real-world conditions.</p>
+                <p><strong>System Identification:</strong> Built physics-based dynamic models through systematic testing and parameter estimation, enabling predictive control and improving trajectory tracking accuracy.</p>
+                <p><strong>Hardware Integration:</strong> Designed electrical circuits and developed integrated hardware layouts, ensuring robust sensor connections and power management for field deployment.</p>
+                <p><strong>Advanced Control:</strong> Implemented both PID controllers for baseline performance and Lie-MPC for advanced trajectory tracking on embedded hardware. Achieved significant improvements in tracking stability and reduced steady-state errors.</p>
+                <p><strong>Industry Impact:</strong> This work directly contributes to Lacuum.ai's commercial product, enabling reliable autonomous navigation for real-world applications in logistics, delivery, and mobile robotics.</p>
+              </div>
+            </div>
           </div>
         </div>
-  
+
         <!-- Microplate Washer Project -->
         <div class="research-card" id="microplate">
           <img src="Dispenser.jpg" alt="Microplate Dispenser" class="research-image">
@@ -980,9 +1044,31 @@
             <div class="metrics">
               <strong>Performance:</strong> <45s wash cycle | uniformity <5% variance | total cost < $500
             </div>
+
+            <button class="see-details-btn" onclick="toggleDetails('microplate-details')">
+              <span>See Details</span>
+              <span class="arrow">▼</span>
+            </button>
+
+            <div id="microplate-details" class="details-section">
+              <div class="details-content">
+                <h4>🏛️ Institution & Collaboration</h4>
+                <p>ME450 Senior Design Project at University of Michigan in partnership with the Taubman Nanobody Institute. Collaborating with biomedical researchers to develop laboratory automation equipment for ELISA testing workflows.</p>
+
+                <h4>🎯 Problem Statement</h4>
+                <p>The Taubman Nanobody Institute needed an automated solution for washing 96-well microplates in ELISA (Enzyme-Linked Immunosorbent Assay) testing. Manual rinsing is time-consuming, inconsistent, and prone to human error. Commercial plate washers cost $5,000-$15,000, making them inaccessible for smaller labs. Key technical challenges include: achieving uniform flow distribution across 96 wells, precise mechanical alignment for repeatable dispensing, minimizing wash cycle time while ensuring thorough cleaning, and keeping total cost under $500.</p>
+
+                <h4>💡 Detailed Impact</h4>
+                <p><strong>Mechanical Design:</strong> Designed complete automated washer system including uniform dispensing head, conveyor mechanism for plate transport, and fluid distribution manifold ensuring <5% variance in flow across all wells.</p>
+                <p><strong>Engineering Analysis:</strong> Conducted CFD (Computational Fluid Dynamics) analysis to optimize flow uniformity and performed mechanical tolerance studies to ensure sub-millimeter alignment accuracy for reliable dispensing.</p>
+                <p><strong>Automation & Control:</strong> Integrated stepper motor-driven motion control, emergency stop system, and user-friendly control interface, achieving <45s wash cycles—3x faster than manual washing.</p>
+                <p><strong>Cost Innovation:</strong> Achieved total cost <$500 (10-30x cheaper than commercial alternatives) while maintaining performance, making automated ELISA washing accessible to resource-constrained research labs.</p>
+                <p><strong>Lab Impact:</strong> Deployed system now enables Taubman researchers to process significantly more samples with improved consistency, accelerating nanobody research and development timelines.</p>
+              </div>
+            </div>
           </div>
         </div>
-  
+
         <!-- Quantitative Trading Internship -->
         <div class="research-card" id="quant-trading">
           <img src="quant.png" alt="Quantitative Trading" class="research-image">
@@ -999,6 +1085,67 @@
             </div>
             <div class="research-links">
               <a href="https://github.com/Ziyu-Xuuuu/Stock_Quant" target="_blank">🔗 GitHub: Stock_Quant</a>
+            </div>
+
+            <button class="see-details-btn" onclick="toggleDetails('quant-details')">
+              <span>See Details</span>
+              <span class="arrow">▼</span>
+            </button>
+
+            <div id="quant-details" class="details-section">
+              <div class="details-content">
+                <h4>🏛️ Institution & Collaboration</h4>
+                <p>Quantitative Trading Internship at APEXUS Tech LLC, working with quantitative analysts and software engineers to develop algorithmic trading systems. Gained exposure to financial modeling, statistical learning, and high-performance computing in trading applications.</p>
+
+                <h4>🎯 Problem Statement</h4>
+                <p>Financial markets are highly complex and noisy, making it difficult to extract consistent alpha (excess returns). Traditional trading strategies often rely on limited factors and fail to adapt to changing market conditions. The challenge is to develop a quantitative model that: combines statistical learning with automated factor discovery, adapts to real-time market signals, maintains robust performance across different market regimes, and achieves risk-adjusted returns (measured by Sharpe ratio).</p>
+
+                <h4>💡 Detailed Impact</h4>
+                <p><strong>Hybrid Modeling:</strong> Developed a quantitative model combining statistical learning techniques with automated factor-mining algorithms, enabling discovery of non-obvious predictive signals that traditional methods miss.</p>
+                <p><strong>Software Integration:</strong> Implemented the predictive model within a custom trading framework using Python for rapid prototyping and C++ for performance-critical components, achieving real-time execution speeds.</p>
+                <p><strong>Adaptive System:</strong> Enabled adaptive parameter tuning based on real-time market signals, allowing the system to adjust to changing volatility regimes and market microstructure shifts.</p>
+                <p><strong>Performance Metrics:</strong> Back-testing demonstrated 10.3% annualized return with a Sharpe ratio of 1.4 (indicating strong risk-adjusted returns). For context, Sharpe ratio >1.0 is considered good, and 1.4 suggests consistent outperformance with controlled risk.</p>
+                <p><strong>Technical Skills:</strong> Gained hands-on experience in quantitative finance, time-series analysis, optimization algorithms, and production trading system architecture.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SJTU Data Platform Internship -->
+        <div class="research-card" id="sjtu-data">
+          <img src="Dada.jpg" alt="Data Platform" class="research-image">
+          <div class="research-content">
+            <h3>Academic Data Analysis Platform (Intern)</h3>
+            <p class="affiliation">Library of Shanghai Jiao Tong University | Data Platform Intern | Sep 2023 - May 2024</p>
+            <ul>
+              <li>Led team of 4 to build academic data platform analyzing Web of Science publications</li>
+              <li>Developed Python/Java-based data extraction & indexing pipeline for internal analytics</li>
+              <li>Integrated platform with SJTU official website for unified researcher access</li>
+            </ul>
+            <div class="metrics">
+              <strong>Impact:</strong> Serving 4000+ researchers across SJTU
+            </div>
+
+            <button class="see-details-btn" onclick="toggleDetails('sjtu-data-details')">
+              <span>See Details</span>
+              <span class="arrow">▼</span>
+            </button>
+
+            <div id="sjtu-data-details" class="details-section">
+              <div class="details-content">
+                <h4>🏛️ Institution & Collaboration</h4>
+                <p>Data Platform Internship at Shanghai Jiao Tong University Library, leading a team of 4 developers to create internal academic analytics tools. Collaborating with library administration and research offices to understand faculty data needs.</p>
+
+                <h4>🎯 Problem Statement</h4>
+                <p>SJTU researchers lacked a centralized platform to track and analyze publication metrics across the university. Existing commercial solutions (like Web of Science) don't provide institution-specific analytics or integration with university systems. Key challenges include: extracting and parsing large volumes of publication data from Web of Science, building efficient indexing and search infrastructure for 4000+ researchers, developing meaningful analytics and visualization for institutional research assessment, and integrating seamlessly with SJTU's existing web infrastructure.</p>
+
+                <h4>💡 Detailed Impact</h4>
+                <p><strong>Team Leadership:</strong> Led a cross-functional team of 4 developers, managing project timeline, coordinating with stakeholders, and ensuring deliverable quality—gaining valuable experience in technical project management.</p>
+                <p><strong>Data Pipeline:</strong> Developed robust Python/Java-based extraction and indexing pipeline processing thousands of publications, handling data cleaning, deduplication, and normalization challenges at scale.</p>
+                <p><strong>Platform Integration:</strong> Successfully integrated the analytics platform with SJTU's official website, providing unified researcher access and single sign-on (SSO) authentication for 4000+ faculty members.</p>
+                <p><strong>University Impact:</strong> Platform now serves as the primary tool for SJTU administration to assess research output, track citation metrics, identify collaboration patterns, and support funding allocation decisions.</p>
+                <p><strong>Technical Growth:</strong> Gained experience in full-stack development, database design, API integration, and large-scale data processing—bridging software engineering and data analytics.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1019,34 +1166,34 @@
             <div class="metrics">
               <strong>Achievement:</strong> 3rd Place out of 50+ teams | Top 8% | National-level robotics competition
             </div>
-          </div>
-        </div>
 
+            <button class="see-details-btn" onclick="toggleDetails('robmaster-details')">
+              <span>See Details</span>
+              <span class="arrow">▼</span>
+            </button>
 
+            <div id="robmaster-details" class="details-section">
+              <div class="details-content">
+                <h4>🏛️ Institution & Collaboration</h4>
+                <p>Team Leader and Mechanical Engineer for Shanghai Jiao Tong University's RobMaster competition team. Led a multidisciplinary team of mechanical, electrical, and software engineers competing against 50+ top universities from China and internationally.</p>
 
-        <!-- SJTU Data Platform Internship -->
-        <div class="research-card" id="sjtu-data">
-          <img src="Dada.jpg" alt="Data Platform" class="research-image">
-          <div class="research-content">
-            <h3>Academic Data Analysis Platform (Intern)</h3>
-            <p class="affiliation">Library of Shanghai Jiao Tong University | Data Platform Intern | Sep 2023 - May 2024</p>
-            <ul>
-              <li>Led team of 4 to build academic data platform analyzing Web of Science publications</li>
-              <li>Developed Python/Java-based data extraction & indexing pipeline for internal analytics</li>
-              <li>Integrated platform with SJTU official website for unified researcher access</li>
-            </ul>
-            <div class="metrics">
-              <strong>Impact:</strong> Serving 4000+ researchers across SJTU
+                <h4>🎯 Problem Statement</h4>
+                <p>RobMaster is China's premier robotics competition featuring real-time combat between autonomous and semi-autonomous robots. Teams must design, build, and program combat robots capable of: high-speed maneuvering and precise motion control, real-time target detection and tracking using computer vision, automated ammunition feeding and firing mechanisms, robust mechanical design to withstand physical impacts, and strategic decision-making under time pressure. The challenge combines mechanical engineering, embedded systems, computer vision, and control theory in an intensely competitive environment.</p>
+
+                <h4>💡 Detailed Impact</h4>
+                <p><strong>Team Leadership:</strong> Led the team to 3rd place finish against 50+ teams from prestigious institutions including Tsinghua, Peking University, and international universities—demonstrating strong project management and technical leadership skills.</p>
+                <p><strong>Mechanical Design:</strong> Designed complete mechanical structure from ground up: robust chassis for high-speed maneuverability, precision turret system with 360° rotation and elevation control, reliable ammunition feeding mechanism capable of sustained fire rates, all optimized for weight, durability, and performance under combat conditions.</p>
+                <p><strong>Low-Level Control:</strong> Implemented embedded control systems for motor control (DC, BLDC, stepper motors), motion planning algorithms for autonomous navigation, real-time PID tuning for stable turret aiming, and sensor fusion for accurate state estimation.</p>
+                <p><strong>Vision Integration:</strong> Developed and integrated computer vision pipeline for automated enemy detection and tracking, combining hardware (cameras, processing units) with software (object detection, tracking algorithms) in a cohesive mechatronic system.</p>
+                <p><strong>Competition Impact:</strong> Top 8% finish in national competition validated engineering decisions and demonstrated ability to deliver complex robotic systems under strict deadlines and performance requirements.</p>
+              </div>
             </div>
           </div>
         </div>
 
-
-
       </div>
     </div>
   </section>
-
 
   <!-- Skills Section -->
   <section id="skills">
