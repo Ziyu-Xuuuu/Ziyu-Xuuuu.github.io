@@ -488,12 +488,12 @@
     .timeline-items-container {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       position: relative;
       min-width: 100%;
       width: max-content;
       gap: 20px;
-      height: 100%;
+      padding-top: 120px;
     }
 
     @media (max-width: 1200px) {
@@ -507,15 +507,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       flex: 1;
       cursor: pointer;
       transition: all 0.3s ease;
-      height: 100%;
     }
 
     .h-timeline-item:hover .h-timeline-dot {
-      transform: translate(-50%, -50%) scale(1.5);
+      transform: scale(1.5);
       background: #0969da;
       box-shadow: 0 0 20px rgba(9, 105, 218, 0.6);
     }
@@ -526,10 +524,7 @@
     }
 
     .h-timeline-dot {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
       width: 16px;
       height: 16px;
       border-radius: 50%;
@@ -538,6 +533,7 @@
       z-index: 2;
       transition: all 0.3s ease;
       box-shadow: 0 0 10px rgba(9, 105, 218, 0.3);
+      margin-bottom: 8px;
     }
 
     .h-timeline-label {
